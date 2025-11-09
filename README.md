@@ -6,7 +6,8 @@
 
 ![image](assets/flyer1.jpg)
 
-- Streamlit Cloud [Teman Gemini](https://teman-gemini.streamlit.app)
+Streamlit Cloud [Teman Gemini](https://teman-gemini.streamlit.app)
+
 Aplikasi ini merupakan final project dari pelatihan "LLM-Based Tools and Gemini API Integration for Data Scientists" yang diselenggarakan oleh Hacktive8. Program ini merupakan bagian dari AI Opportunity Fund: Asia Pacific, yang bekerja sama dengan AVPN serta didukung oleh Google.org dan Asian Development Bank (ADB).
 
 

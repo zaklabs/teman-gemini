@@ -1,14 +1,14 @@
 # 🤖 Teman Gemini - AI Chatbot
-
+[<h1 align="center">
 ![Python](https://img.shields.io/badge/Python-3.13+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Hacktive8](https://academic.hacktiv8.com/static/media/hacktiv-navbar.35edca5f.png)
-
+</h1>
 
 ![image](assets/flyer1.jpg)
 
-Aplikasi chatbot AI interaktif yang dibangun dengan Streamlit dan Google Gemini. Teman Gemini menyediakan dua fitur utama: **Chat AI** untuk percakapan dengan asisten AI cerdas, dan **Chat Dokumen** untuk menganalisis dan bertanya tentang dokumen PDF menggunakan teknologi RAG (Retrieval Augmented Generation). Aplikasi ini merupakan final project dari pelatihan "LLM-Based Tools and Gemini API Integration for Data Scientists" yang diselenggarakan oleh Hacktive8. Program ini merupakan bagian dari AI Opportunity Fund: Asia Pacific, yang bekerja sama dengan AVPN serta didukung oleh Google.org dan Asian Development Bank (ADB).
+Aplikasi ini merupakan final project dari pelatihan "LLM-Based Tools and Gemini API Integration for Data Scientists" yang diselenggarakan oleh Hacktive8. Program ini merupakan bagian dari AI Opportunity Fund: Asia Pacific, yang bekerja sama dengan AVPN serta didukung oleh Google.org dan Asian Development Bank (ADB).
 
 ## ✨ Fitur
 

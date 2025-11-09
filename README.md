@@ -1,10 +1,10 @@
 # 🤖 Teman Gemini - AI Chatbot
-<h1 align="center">
+<p align="center">
 ![Python](https://img.shields.io/badge/Python-3.13+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Hacktive8](https://academic.hacktiv8.com/static/media/hacktiv-navbar.35edca5f.png)
-</h1>
+</p>
 
 ![image](assets/flyer1.jpg)
 

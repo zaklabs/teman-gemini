@@ -1,14 +1,12 @@
 # 🤖 Teman Gemini - AI Chatbot
-
 ![Python](https://img.shields.io/badge/Python-3.13+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Hacktive8](https://academic.hacktiv8.com/static/media/hacktiv-navbar.35edca5f.png)
 
+![image](assets/flyer1.jpg)
 
-![image](assets/welcome.jpg)
-
-Aplikasi chatbot AI interaktif yang dibangun dengan Streamlit dan Google Gemini. Teman Gemini menyediakan dua fitur utama: **Chat AI** untuk percakapan dengan asisten AI cerdas, dan **Chat Dokumen** untuk menganalisis dan bertanya tentang dokumen PDF menggunakan teknologi RAG (Retrieval Augmented Generation). Aplikasi ini merupakan final project dari pelatihan "LLM-Based Tools and Gemini API Integration for Data Scientists" yang diselenggarakan oleh Hacktive8. Program ini merupakan bagian dari AI Opportunity Fund: Asia Pacific, yang bekerja sama dengan AVPN serta didukung oleh Google.org dan Asian Development Bank (ADB).
+Aplikasi ini merupakan final project dari pelatihan "LLM-Based Tools and Gemini API Integration for Data Scientists" yang diselenggarakan oleh Hacktive8. Program ini merupakan bagian dari AI Opportunity Fund: Asia Pacific, yang bekerja sama dengan AVPN serta didukung oleh Google.org dan Asian Development Bank (ADB).
 
 ## ✨ Fitur
 
@@ -187,25 +185,6 @@ Parameter AI dapat disesuaikan di sidebar (fitur Chat AI):
 
 MIT License
 
-Copyright (c) 2024 Zaki Fuadi
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 
 ## 👤 Author
 

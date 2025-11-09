@@ -6,7 +6,7 @@
 ![Hacktive8](https://academic.hacktiv8.com/static/media/hacktiv-navbar.35edca5f.png)
 
 
-![image](assets/flyer.jpg)
+![image](assets/flyer1.jpg)
 
 Aplikasi chatbot AI interaktif yang dibangun dengan Streamlit dan Google Gemini. Teman Gemini menyediakan dua fitur utama: **Chat AI** untuk percakapan dengan asisten AI cerdas, dan **Chat Dokumen** untuk menganalisis dan bertanya tentang dokumen PDF menggunakan teknologi RAG (Retrieval Augmented Generation). Aplikasi ini merupakan final project dari pelatihan "LLM-Based Tools and Gemini API Integration for Data Scientists" yang diselenggarakan oleh Hacktive8. Program ini merupakan bagian dari AI Opportunity Fund: Asia Pacific, yang bekerja sama dengan AVPN serta didukung oleh Google.org dan Asian Development Bank (ADB).
 

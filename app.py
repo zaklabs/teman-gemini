@@ -114,25 +114,43 @@ def simulate_typing(text: str, container):
 # --- 1. Muat Konfigurasi ---
 
 def load_config():
-    """Memuat konfigurasi dari file config.json"""
+    """Memuat konfigurasi dari file config.json atau Streamlit secrets"""
     config_path = "config.json"
     
-    if not os.path.exists(config_path):
-        st.error("❌ Config file not found! Please create config.json with your Google API key.")
-        st.stop()
-    
-    try:
-        with open(config_path, 'r') as f:
-            config = json.load(f)
-        
-        if "google_api_key" not in config or config["google_api_key"] == "YOUR_GOOGLE_API_KEY_HERE":
-            st.error("❌ Please set your Google API key in config.json")
+    # Cek apakah file config.json ada (untuk development lokal)
+    if os.path.exists(config_path):
+        try:
+            with open(config_path, 'r') as f:
+                config = json.load(f)
+            
+            if "google_api_key" not in config or config["google_api_key"] == "YOUR_GOOGLE_API_KEY_HERE":
+                st.error("❌ Please set your Google API key in config.json")
+                st.stop()
+            
+            return config
+        except Exception as e:
+            st.error(f"❌ Error loading config: {e}")
             st.stop()
-        
-        return config
-    except Exception as e:
-        st.error(f"❌ Error loading config: {e}")
-        st.stop()
+    
+    # Jika config.json tidak ada, gunakan Streamlit secrets (untuk deployment)
+    else:
+        try:
+            api_key = st.secrets["GEMINI_API_KEY"]
+            return {"google_api_key": api_key}
+        except Exception as e:
+            st.error(f"❌ API key tidak ditemukan! Pastikan config.json ada atau GEMINI_API_KEY sudah diset di Streamlit secrets.")
+            st.error(f"Error: {e}")
+            st.info("""
+            **Untuk development lokal:** Buat file config.json dengan format:
+            ```json
+            {
+                "google_api_key": "YOUR_API_KEY_HERE"
+            }
+            ```
+            
+            **Untuk Streamlit Cloud:** Tambahkan GEMINI_API_KEY di secrets management.
+            """)
+            st.stop()
 
 # Muat konfigurasi
 config = load_config()

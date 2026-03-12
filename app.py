@@ -155,6 +155,8 @@ def load_config():
 # Muat konfigurasi
 config = load_config()
 google_api_key = config["google_api_key"]
+chat_model = config.get("chat_model", "gemini-2.0-flash")
+embedding_model = config.get("embedding_model", "models/text-embedding-004")
 
 # --- 2. Inisialisasi Database ---
 @st.cache_resource
@@ -322,8 +324,17 @@ if st.session_state.get("selected_feature") == "document":
     st.write("Upload dokumen PDF dan tanyakan apapun tentang isinya menggunakan AI")
     
     # Inisialisasi RAG jika belum ada
-    if "document_rag" not in st.session_state:
-        st.session_state.document_rag = DocumentRAG(google_api_key)
+    current_document_models = (chat_model, embedding_model)
+    stored_document_models = st.session_state.get("document_models")
+    if "document_rag" not in st.session_state or stored_document_models != current_document_models:
+        if "document_rag" in st.session_state:
+            st.session_state.document_rag.cleanup()
+        st.session_state.document_rag = DocumentRAG(
+            google_api_key,
+            chat_model=chat_model,
+            embedding_model=embedding_model,
+        )
+        st.session_state.document_models = current_document_models
     
     # Inisialisasi riwayat QA jika belum ada
     if "document_qa_history" not in st.session_state:
@@ -498,14 +509,14 @@ else:
     
     # --- Inisialisasi Agent untuk Chat ---
     # Reinisialisasi agent jika parameter berubah atau agent belum ada
-    current_params = (temperature, top_p, top_k)
+    current_params = (chat_model, temperature, top_p, top_k)
     stored_params = st.session_state.get("last_params", None)
     
     if "agent" not in st.session_state or current_params != stored_params:
         try:
             # Inisialisasi LLM dengan API key dan parameter dari slider
             llm = ChatGoogleGenerativeAI(
-                model="gemini-2.0-flash-exp",
+                model=chat_model,
                 google_api_key=google_api_key,
                 temperature=temperature,
                 top_p=top_p,

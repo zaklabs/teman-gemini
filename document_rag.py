@@ -13,7 +13,7 @@
 # - Menggunakan LangChain untuk pemrosesan dan retrieval dokumen
 # - Mengimplementasikan pencarian vektor menggunakan ChromaDB untuk semantic search
 # - Mendukung loading dokumen PDF, chunking, dan Q&A
-# - Menggunakan model embedding Google Gemini: gemini-embedding-exp-03-07
+# - Menggunakan model Gemini yang bisa dikonfigurasi untuk chat dan embeddings
 #
 # ============================================================================
 
@@ -36,20 +36,29 @@ import shutil
 class DocumentRAG:
     """Class untuk menangani RAG dengan dokumen PDF"""
     
-    def __init__(self, api_key: str):
+    def __init__(
+        self,
+        api_key: str,
+        chat_model: str = "gemini-2.0-flash",
+        embedding_model: str = "models/text-embedding-004"
+    ):
         """
         Inisialisasi sistem RAG
         
         Args:
             api_key: Google API key
+            chat_model: Nama model Gemini untuk chat dan ringkasan
+            embedding_model: Nama model Gemini untuk embeddings
         """
         self.api_key = api_key
+        self.chat_model = chat_model
+        self.embedding_model = embedding_model
         self.embeddings = GoogleGenerativeAIEmbeddings(
-            model="models/gemini-embedding-exp-03-07",
+            model=self.embedding_model,
             google_api_key=api_key
         )
         self.llm = ChatGoogleGenerativeAI(
-            model="gemini-2.0-flash-exp",
+            model=self.chat_model,
             google_api_key=api_key,
             temperature=0.3
         )

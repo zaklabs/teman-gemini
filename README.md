@@ -76,9 +76,13 @@ Buat file `config.json` di root directory dengan format berikut:
 
 ```json
 {
-    "google_api_key": "YOUR_GOOGLE_API_KEY_HERE"
+  "google_api_key": "YOUR_GOOGLE_API_KEY_HERE",
+  "chat_model": "gemini-2.0-flash",
+  "embedding_model": "models/text-embedding-004"
 }
 ```
+
+`chat_model` dan `embedding_model` bersifat opsional. Jika tidak diisi, aplikasi akan memakai default stabil di atas.
 
 **Cara mendapatkan Google API Key:**
 1. Kunjungi [Google AI Studio](https://makersuite.google.com/app/apikey)
